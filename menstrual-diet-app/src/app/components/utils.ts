@@ -34,7 +34,10 @@ export const generatesUserRecommendations = async (formData: {
 
     if (response.status === 200) {
       const parsedUserRecommendation = parseUserRecommendations(response.data);
+      console.log(response.data);
+      console.log(parsedUserRecommendation);
       return parsedUserRecommendation;
+      
     } else {
       throw new Error('Failed to fetch recommendations');
     }
@@ -43,6 +46,7 @@ export const generatesUserRecommendations = async (formData: {
     return [];
   }
 };
+
 
 // Example parsing function (you can adapt it)
 const parseUserRecommendations = (data: any) => {

@@ -78,7 +78,8 @@ export default function ReportPage() {
         <h2 className="text-lg font-semibold mb-2">Nutrition Recommendation</h2>
         <p className="text-gray-700">{nutritionRecommendation}</p>
       </div>
-      {/* <UserDataScreen /> */}
+      <UserDataScreen />
     </div>
+    
   );
 }
