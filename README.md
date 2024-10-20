@@ -1,2 +1,4 @@
 # calhacks24
-menstrual cycle app
+Authors: Aida, Iyu, Victor, Vijay
+
+Menstrual Cycle Tracker + Nutrition & Lifestyle Insights
