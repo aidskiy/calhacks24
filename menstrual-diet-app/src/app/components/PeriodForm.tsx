@@ -101,7 +101,7 @@ const PeriodForm: React.FC = () => {
     }
 
     // Navigate to the main page
-    router.push("/main"); // Replace '/main' with your main page route
+    router.push("/report"); // Replace '/main' with your main page route
   };
 
   return (
