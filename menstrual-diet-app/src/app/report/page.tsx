@@ -26,7 +26,6 @@ export default function ReportPage() {
 
   useEffect(() => {
     // Retrieve data from localStorage
-    const storedWeight = localStorage.getItem("weight");
     const storedAge = localStorage.getItem("age");
     const storedAverageCycleLength = localStorage.getItem("averageCycleLength");
     const storedDaysInCurrentCycle = localStorage.getItem("daysInCurrentCycle");

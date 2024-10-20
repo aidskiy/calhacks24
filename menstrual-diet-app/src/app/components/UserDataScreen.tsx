@@ -54,10 +54,20 @@ function UserDataScreen() {
             const response = await axios.post(
                 `https://api.openai.com/v1/chat/completions`,
                 {
-                    prompt: `Generate a list of recommended food items based on ${JSON.stringify(formData)}, give me descriptions in two sentences.`,
-                    format: 'json'
-                },
-                {
+                    model: 'gpt-3.5-turbo', // Ensure the model is provided
+                    messages: [
+                      {
+                        role: 'system',
+                        content: 'You are a nutritionist.',
+                      },
+                      {
+                        role: 'user',
+                        content: `Based on a person who is ${formData.age} years old, in the ${formData.currentPhase} of their menstrual cycle, on day ${formData.daysInCurrentCycle} of a cycle that lasts an average of ${formData.averageCycleLength} days, generate nutrition recommendations. Please provide specific food items or nutrients they should focus on during this phase and explain why they are beneficial during this phase.`,
+                      },
+                    ],
+                    max_tokens: 100, // Specify max tokens if you want
+                  },
+                  {
                     headers: {
                         'Content-Type': 'application/json',
                         'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`
