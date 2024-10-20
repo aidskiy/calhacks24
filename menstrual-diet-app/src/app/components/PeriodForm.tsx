@@ -101,14 +101,12 @@ const PeriodForm: React.FC = () => {
     }
 
     // Navigate to the main page
-    router.push("/MenstrualReport"); // Replace '/main' with your main page route
+    router.push("/report"); // Replace '/main' with your main page route
   };
 
   return (
     <div className="bg-gradient-to-r from-rose-50 to-rose-200 min-h-screen flex items-center justify-center">
-      <div className="absolute top-5 left-5">
-        <img src="/images/plum.png" alt="Logo" className="h-32 w-auto" />
-      </div>
+      <div className="absolute top-5 left-5">{/* <img src="/images/plum.png" alt="Logo" className="h-32 w-auto" /> */}</div>
       <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
         <h1 className="text-2xl font-bold">Hello Sugar Plumies💖 </h1>
         <p className="mb-2">Please mark the dates of your last three menstrual cycles</p>
