@@ -1,11 +1,12 @@
 // src/app/page.tsx
 import React from 'react';
-import PeriodForm from './components/PeriodForm';
+import UserDataScreen from './components/UserDataScreen';
 
 const HomePage: React.FC = () => {
   return (
     <div className="p-4">
-      <PeriodForm />
+      <UserDataScreen />
+      
     </div>
   );
 };
