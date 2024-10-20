@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import UserDataScreen from "../components/UserDataScreen";
 
 const getPhaseColor = (phase) => {
   switch (phase) {
@@ -53,6 +54,7 @@ export default function ReportPage() {
           <li className="text-gray-700">Current Phase: {currentPhase}</li>
         </ul>
       </div>
+      <UserDataScreen />
     </div>
   );
 }
