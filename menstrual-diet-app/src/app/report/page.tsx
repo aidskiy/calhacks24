@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import UserDataScreen from "../components/UserDataScreen";
+import Home from ".././components/chatbot";
 
 const getPhaseColor = (phase) => {
   switch (phase) {
@@ -74,12 +75,19 @@ export default function ReportPage() {
           <li className="text-gray-700">Current Phase: {currentPhase}</li>
         </ul>
       </div>
-      <div className="bg-white rounded-lg shadow-md p-6 w-full max-w-lg">
+      {/* <button
+        type="button"
+        className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+      >
+        Get Nutrition Recommendation
+      </button> */}
+      <Home />
+
+      {/* <div className="bg-white rounded-lg shadow-md p-6 w-full max-w-lg">
         <h2 className="text-lg font-semibold mb-2">Nutrition Recommendation</h2>
         <p className="text-gray-700">{nutritionRecommendation}</p>
-      </div>
-      <UserDataScreen />
+      </div> */}
+      {/* <UserDataScreen /> */}
     </div>
-    
   );
 }
